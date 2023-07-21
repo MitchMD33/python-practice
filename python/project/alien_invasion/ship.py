@@ -12,7 +12,7 @@ class Ship:
     
     #Load the ship image and get its rect.
     self.image = pygame.image.load('/home/mitchell/Desktop/repo/python-practice/python/project/alien_invasion/images/spaceship2.bmp')
-    self.image = pygame.transform.scale(self.image, (100, 80))
+    self.image = pygame.transform.scale(self.image, (60, 60))
     self.rect = self.image.get_rect()
     #Start each new ship at the bottom center of the screen.
     self.rect.midbottom = self.screen_rect.midbottom
