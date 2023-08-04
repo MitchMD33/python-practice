@@ -11,7 +11,7 @@ class Ship:
     self.settings = ai_game.settings
     
     #Load the ship image and get its rect.
-    self.image = pygame.image.load('/home/mitchell/Desktop/repo/python-practice/python/project/alien_invasion/images/spaceship2.bmp')
+    self.image = pygame.image.load('C:/Users/Brown/python/python-practice/python/project/alien_invasion/images/spaceship2.png')
     self.image = pygame.transform.scale(self.image, (60, 60))
     self.rect = self.image.get_rect()
     #Start each new ship at the bottom center of the screen.
@@ -39,4 +39,9 @@ class Ship:
   def blitme(self):
     """Draw the ship at its current location."""
     self.screen.blit(self.image, self.rect)
+    
+  def center_ship(self):
+    """Center the ship on the screen"""
+    self.rect.midbottom = self.screen_rect.midbottom
+    self.x = float(self.rect.x)
     
